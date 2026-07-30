@@ -578,6 +578,89 @@ footer p {
     padding: 40px 20px;
   }
 }
+  /* ====================
+   GUARANTEE BANNER
+   ==================== */
+.guarantee-banner {
+  background: linear-gradient(135deg, rgba(226, 180, 154, 0.1), rgba(26, 22, 20, 0.8));
+  border: 1px solid var(--gold-primary);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: var(--shadow-glow);
+}
+
+.guarantee-banner h3 {
+  color: var(--gold-primary);
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.guarantee-banner p {
+  color: var(--text-main);
+  font-size: 16px;
+  margin: 0;
+}
+
+/* ====================
+   HOW IT WORKS (PROCESS)
+   ==================== */
+.process-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.process-step {
+  position: relative;
+  padding: 30px 20px;
+  background: var(--bg-surface);
+  border-radius: 20px;
+  border: 1px solid rgba(226, 180, 154, 0.1);
+  transition: var(--transition);
+}
+
+.process-step:hover {
+  border-color: var(--gold-primary);
+  transform: translateY(-5px);
+}
+
+.step-number {
+  position: absolute;
+  top: -20px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 40px;
+  height: 40px;
+  background: var(--gold-primary);
+  color: var(--bg-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 20px;
+  box-shadow: 0 5px 15px rgba(226, 180, 154, 0.3);
+}
+
+.process-step h4 {
+  color: var(--gold-light);
+  font-size: 20px;
+  margin: 20px 0 10px;
+}
+
+.process-step p {
+  color: var(--text-muted);
+  font-size: 15px;
+}
 </style>
 </head>
 <body>
@@ -746,6 +829,43 @@ footer p {
     <p>
       אנו מאמינים שלכל אישה מגיעה פאה שתרגיש בה הכי בנוח בעולם. הפאות שלנו מיוצרות מ-100% שיער טבעי ואיכותי, שנבחר בקפידה כדי להבטיח מראה טבעי, רך וזוהר. בזכות המודל הישיר שלנו, אנחנו מצליחים לספק איכות של מותגי יוקרה - בלי פערי התיווך, ובמחיר שמאפשר לך להתחדש בראש שקט.
     </p>
+  </section>
+
+  <!-- Guarantee Banner -->
+  <section class="container">
+    <div class="guarantee-banner">
+      <h3>אפס סיכון. 100% ביטחון.</h3>
+      <p>אנחנו כל כך בטוחים באיכות הפאות שלנו, שהתשלום מתבצע <strong>אך ורק לאחר האיסוף, המדידה, ורק כשאת מרוצה לחלוטין.</strong> ללא מקדמות וללא אותיות קטנות.</p>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="container process-section">
+    <h2>איך זה <span class="gradient-text">עובד?</span></h2>
+    <p style="color: var(--text-muted); margin-top: 10px;">שלושה צעדים פשוטים בדרך לפאת החלומות שלך</p>
+    
+    <div class="process-grid">
+      <!-- Step 1 -->
+      <div class="process-step">
+        <div class="step-number">1</div>
+        <h4>מילוי פרטים והצעת מחיר</h4>
+        <p>את ממלאת את השאלון הקצר למעלה עם המפרט המדויק שאת מחפשת, ואנחנו חוזרים אלייך עם הצעת מחיר אטרקטיבית וייעוץ אישי ללא התחייבות.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="process-step">
+        <div class="step-number">2</div>
+        <h4>התאמה וייצור</h4>
+        <p>לאחר אישור ההצעה, אנחנו מתחילים במלאכת ההרכבה וההתאמה של הפאה במיוחד למידות, לצבע ולסגנון שבחרת, תוך שימוש בשיער האיכותי ביותר.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="process-step">
+        <div class="step-number">3</div>
+        <h4>מדידה, ורק אז תשלום</h4>
+        <p>הפאה מוכנה! את מוזמנת לאיסוף ומדידה. את בוחנת את השיער, מרגישה את הרשת על הראש, <strong>ומשלמת רק אחרי שראית והתאהבת בתוצאה.</strong></p>
+      </div>
+    </div>
   </section>
 
   <!-- Reviews Section -->
