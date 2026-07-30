@@ -670,6 +670,129 @@ footer p {
   .thanks-box h2 { font-size: 26px; }
   .info-section, .process-section, .reviews-section, .order-section-wrapper { padding-top: 40px; padding-bottom: 40px; }
 }
+
+
+/* ====================
+   WIG INSPIRATION GALLERY
+   ==================== */
+.wig-showcase {
+  padding: 42px 0 20px;
+}
+
+.wig-carousel-shell {
+  position: relative;
+  margin-top: 0;
+}
+
+.wig-carousel {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 8px 6px 20px;
+  direction: ltr;
+  overscroll-behavior-inline: contain;
+}
+
+.wig-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.wig-card {
+  position: relative;
+  flex: 0 0 clamp(220px, 23vw, 282px);
+  aspect-ratio: 4 / 5;
+  border-radius: 22px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  background: var(--bg-surface);
+  border: 1px solid rgba(226, 180, 154, 0.2);
+  box-shadow: 0 18px 45px rgba(0,0,0,.28);
+}
+
+.wig-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.015);
+  transition: transform .7s ease, filter .4s ease;
+}
+
+.wig-card:hover img {
+  transform: scale(1.06);
+  filter: brightness(1.04);
+}
+
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(226,180,154,.5);
+  background: rgba(15,12,11,.88);
+  color: var(--gold-light);
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.35);
+  transition: var(--transition);
+}
+
+.gallery-nav:hover {
+  background: var(--gold-primary);
+  color: var(--bg-dark);
+  transform: translateY(-50%) scale(1.06);
+}
+
+.gallery-prev { left: -16px; }
+.gallery-next { right: -16px; }
+
+.gallery-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.gallery-progress {
+  width: min(220px, 48vw);
+  height: 3px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(226,180,154,.15);
+}
+
+.gallery-progress span {
+  display: block;
+  height: 100%;
+  width: 10%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold-light));
+  transition: width .35s ease;
+}
+
+@media (max-width: 700px) {
+  .wig-showcase { padding-top: 34px; }
+  .wig-carousel {
+    width: calc(100vw - 4%);
+    margin-inline: calc((92vw - 100vw) / 2);
+    padding-inline: 7vw;
+    gap: 14px;
+  }
+  .wig-card { flex-basis: 78vw; max-width: 330px; }
+  .gallery-nav { display: none; }
+}
+
 </style>
 </head>
 <body>
@@ -735,6 +858,51 @@ footer p {
     <div class="guarantee-banner">
       <h3>Essayez d’abord, payez ensuite.</h3>
       <p>Votre tranquillité d’esprit est essentielle. Hormis de modestes frais de dossier versés au lancement de la commande, <strong>le paiement de la perruque s’effectue uniquement lors de l’essayage et de la remise.</strong></p>
+    </div>
+  </section>
+
+
+  <!-- Wig Inspiration Gallery -->
+  <section class="container wig-showcase" aria-label="Wig inspiration gallery">
+    <div class="wig-carousel-shell">
+      <button class="gallery-nav gallery-prev" type="button" aria-label="Previous image">‹</button>
+      <div class="wig-carousel" id="wigCarousel" tabindex="0">
+      <article class="wig-card">
+        <img src="wig-gallery/wig-01.webp" alt="Wig style 1" loading="eager" width="640" height="800">
+      </article>
+      <article class="wig-card">
+        <img src="wig-gallery/wig-02.webp" alt="Wig style 2" loading="eager" width="640" height="800">
+      </article>
+      <article class="wig-card">
+        <img src="wig-gallery/wig-03.webp" alt="Wig style 3" loading="lazy" width="640" height="800">
+      </article>
+      <article class="wig-card">
+        <img src="wig-gallery/wig-04.webp" alt="Wig style 4" loading="lazy" width="640" height="800">
+      </article>
+      <article class="wig-card">
+        <img src="wig-gallery/wig-05.webp" alt="Wig style 5" loading="lazy" width="640" height="800">
+      </article>
+      <article class="wig-card">
+        <img src="wig-gallery/wig-06.webp" alt="Wig style 6" loading="lazy" width="640" height="800">
+      </article>
+      <article class="wig-card">
+        <img src="wig-gallery/wig-07.webp" alt="Wig style 7" loading="lazy" width="640" height="800">
+      </article>
+      <article class="wig-card">
+        <img src="wig-gallery/wig-08.webp" alt="Wig style 8" loading="lazy" width="640" height="800">
+      </article>
+      <article class="wig-card">
+        <img src="wig-gallery/wig-09.webp" alt="Wig style 9" loading="lazy" width="640" height="800">
+      </article>
+      <article class="wig-card">
+        <img src="wig-gallery/wig-10.webp" alt="Wig style 10" loading="lazy" width="640" height="800">
+      </article>
+      </div>
+      <button class="gallery-nav gallery-next" type="button" aria-label="Next image">›</button>
+    </div>
+
+    <div class="gallery-footer">
+      <div class="gallery-progress" aria-hidden="true"><span></span></div>
     </div>
   </section>
 
@@ -1014,6 +1182,71 @@ document.addEventListener("DOMContentLoaded", () => {
     mainContent.style.filter = "none";
     window.scrollTo(0, 0);
   };
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.getElementById("wigCarousel");
+  if (!carousel) return;
+
+  const cards = [...carousel.querySelectorAll(".wig-card")];
+  const prevButton = document.querySelector(".gallery-prev");
+  const nextButton = document.querySelector(".gallery-next");
+  const progress = document.querySelector(".gallery-progress span");
+  let currentIndex = 0;
+  let timer;
+
+  const gapSize = () => parseFloat(getComputedStyle(carousel).gap) || 0;
+  const stepSize = () => (cards[0]?.getBoundingClientRect().width || 0) + gapSize();
+  const visibleCards = () => Math.max(1, Math.floor((carousel.clientWidth + gapSize()) / stepSize()));
+  const maxIndex = () => Math.max(0, cards.length - visibleCards());
+
+  function updateProgress() {
+    const total = Math.max(1, maxIndex() + 1);
+    progress.style.width = `${((currentIndex + 1) / total) * 100}%`;
+  }
+
+  function goTo(index, smooth = true) {
+    const max = maxIndex();
+    currentIndex = index > max ? 0 : index < 0 ? max : index;
+    carousel.scrollTo({
+      left: currentIndex * stepSize(),
+      behavior: smooth ? "smooth" : "auto"
+    });
+    updateProgress();
+  }
+
+  function startAutoPlay() {
+    clearInterval(timer);
+    timer = setInterval(() => goTo(currentIndex + 1), 3600);
+  }
+
+  function pauseAutoPlay() {
+    clearInterval(timer);
+  }
+
+  prevButton?.addEventListener("click", () => { goTo(currentIndex - 1); startAutoPlay(); });
+  nextButton?.addEventListener("click", () => { goTo(currentIndex + 1); startAutoPlay(); });
+
+  carousel.addEventListener("mouseenter", pauseAutoPlay);
+  carousel.addEventListener("mouseleave", startAutoPlay);
+  carousel.addEventListener("focusin", pauseAutoPlay);
+  carousel.addEventListener("focusout", startAutoPlay);
+  carousel.addEventListener("touchstart", pauseAutoPlay, { passive: true });
+  carousel.addEventListener("touchend", startAutoPlay, { passive: true });
+  carousel.addEventListener("scroll", () => {
+    window.clearTimeout(carousel._scrollTimer);
+    carousel._scrollTimer = window.setTimeout(() => {
+      currentIndex = Math.min(maxIndex(), Math.max(0, Math.round(carousel.scrollLeft / stepSize())));
+      updateProgress();
+    }, 80);
+  }, { passive: true });
+
+  window.addEventListener("resize", () => goTo(Math.min(currentIndex, maxIndex()), false));
+  updateProgress();
+  startAutoPlay();
 });
 </script>
 
